@@ -1,0 +1,41 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'calculate-etag'",
+      "cargo": {
+        "args": ["build", "--bin=calculate-etag", "--package=calculate-etag"],
+        "filter": {
+          "name": "calculate-etag",
+          "kind": "bin"
+        }
+      },
+      "args": ["-s", "5242880", "test_exact_1_chunk.dat"],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'calculate-etag'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=calculate-etag",
+          "--package=calculate-etag"
+        ],
+        "filter": {
+          "name": "calculate-etag",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
