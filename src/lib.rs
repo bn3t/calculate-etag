@@ -54,7 +54,6 @@ mod test_calculate_etag {
     /// util test function to write a bunch of test files
     fn _write_test_files() {
         _write(1000, "test_1_chunk.dat");
-        _write(1000, "test_1_chunk.dat");
         _write(5242880 + 1000, "test_2_chunk.dat");
         _write(5242880 * 2 + 1000, "test_3_chunk.dat");
         _write(5242880, "test_exact_1_chunk.dat");
