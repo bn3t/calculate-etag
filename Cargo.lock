@@ -23,7 +23,7 @@ version = "1.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
-name = "calculate-etag"
+name = "calculate_etag"
 version = "0.1.0"
 dependencies = [
  "err-derive 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)",

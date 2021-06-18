@@ -1,5 +1,5 @@
 [package]
-name = "calculate-etag"
+name = "calculate_etag"
 version = "0.1.0"
 authors = ["Bernard Niset"]
 edition = "2018"
@@ -9,4 +9,20 @@ edition = "2018"
 [dependencies]
 err-derive = "0.1"
 rust-crypto = "0.2.36"
-structopt = "0.3.5"
+
+[dependencies.structopt]
+version = "0.3.5"
+optional = true
+
+[[bin]]
+name = "calculate_etag"
+path = "src/main.rs"
+doc = false
+required-features = ["cli"]
+
+[lib]
+name = "calculate_etag"
+
+[features]
+default = [ "cli" ]
+cli = [ "structopt" ]
